@@ -79,4 +79,13 @@ AZP = Azure Portal
 - used to group VMs based on workload
 - can define NSGs based on these app groups
 ##### Things to know
+- provide an application centric way of looking at infrastructure
+- VMs can be joined to application groups
+- Application groups can then be referenced as source or destinations in NSG rules
+##### Things to consider
+Several advantages to using
+- No need to configure rules for specific IPs
+	- helpful if many machines are all in the same group, or that number changes
+- Subnets are not needed as much either, as machines are segmented by these groups instead
+- Consolidate similar rule sets for multiple machines
 - 
