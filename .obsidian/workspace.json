@@ -6,7 +6,6 @@
       {
         "id": "99dbf338631c89a0",
         "type": "tabs",
-        "dimension": 74.91610738255034,
         "children": [
           {
             "id": "219cbd620e223dc2",
@@ -30,23 +29,6 @@
               },
               "icon": "lucide-file",
               "title": "Configure Network Security Groups"
-            }
-          }
-        ]
-      },
-      {
-        "id": "5a2e54e0b5b56dc8",
-        "type": "tabs",
-        "dimension": 25.083892617449667,
-        "children": [
-          {
-            "id": "394517b9d19d8c28",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
             }
           }
         ]
@@ -106,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 249.5
   },
   "right": {
     "id": "a3eedc8601d97706",
@@ -151,20 +133,21 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "2 - Source Material/Articles/Configure Network Security Groups.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Configure Network Security Groups"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 229.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,13 +161,14 @@
   },
   "active": "219cbd620e223dc2",
   "lastOpenFiles": [
-    "5 - Template/Source Material.md",
-    "2 - Source Material/Articles/Configure Network Security Groups.md",
-    "5 - Template/Full Note.md",
     "3 - Tags/az-104.md",
-    "3 - Tags/networking.md",
-    "3 - Tags/azure-networking.md",
     "3 - Tags/azure.md",
+    "3 - Tags/azure-networking.md",
+    "3 - Tags/networking.md",
+    "3 - Tags/cloud.md",
+    "2 - Source Material/Articles/Configure Network Security Groups.md",
+    "5 - Template/Source Material.md",
+    "5 - Template/Full Note.md",
     "2 - Source Material/Papers/Untitled.md",
     "2 - Source Material/Videos/Untitled.md",
     "2 - Source Material/Podcasts/Untitled.md",
