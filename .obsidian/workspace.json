@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6b4d6002afffd0fb",
+        "id": "8baaa586a93a1f44",
         "type": "tabs",
         "children": [
           {
-            "id": "41ef5eed7249f40a",
+            "id": "62e03a597f7f01cb",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -136,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline"
             }
           }
         ]
@@ -162,13 +161,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "937f5ce48f406afd",
+  "active": "62e03a597f7f01cb",
   "lastOpenFiles": [
+    "5 - Template/Untitled.md",
+    "4 - Indexes/Untitled.md",
+    "3 - Tags/Untitled.md",
+    "2 - Source Material/Untitled.md",
+    "1 - Notes/Untitled.md",
+    "2 - Source Material/Untitled",
     "5 - Template",
     "4 - Indexes",
     "3 - Tags",
     "2 - Source Material",
-    "Untitled.md",
     "1 - Notes",
     "Welcome.md"
   ]
