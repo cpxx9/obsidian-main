@@ -13,6 +13,36 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "3 - Tags/network-security.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "network-security"
+            }
+          }
+        ]
+      },
+      {
+        "id": "c864aaa4c434fcde",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8f91d30325a90e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "2 - Source Material/Articles/Configure Network Security Groups.md",
                 "mode": "source",
                 "source": false,
@@ -141,6 +171,25 @@
               "icon": "lucide-list",
               "title": "Outline of Configure Network Security Groups"
             }
+          },
+          {
+            "id": "5dc127ebf208d2b1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2 - Source Material/Articles/Configure Network Security Groups.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Configure Network Security Groups"
+            }
           }
         ],
         "currentTab": 2
@@ -159,14 +208,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "219cbd620e223dc2",
+  "active": "a8f91d30325a90e8",
   "lastOpenFiles": [
+    "3 - Tags/network-security.md",
+    "2 - Source Material/Articles/Configure Network Security Groups.md",
     "3 - Tags/az-104.md",
     "3 - Tags/azure.md",
     "3 - Tags/azure-networking.md",
     "3 - Tags/networking.md",
     "3 - Tags/cloud.md",
-    "2 - Source Material/Articles/Configure Network Security Groups.md",
     "5 - Template/Source Material.md",
     "5 - Template/Full Note.md",
     "2 - Source Material/Papers/Untitled.md",
