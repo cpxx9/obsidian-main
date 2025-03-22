@@ -1,4 +1,4 @@
-Tags: [[azure]] [[azure-networking]] [[networking]] [[az-104]] [[cloud]]
+Tags: [[azure]] [[azure-networking]] [[networking]] [[az-104]] [[cloud]] [[network-security]]
 
 # Configure Network Security Groups
 ##### Author: MSoft
