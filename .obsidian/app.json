@@ -3,5 +3,9 @@
   "newFileFolderPath": "6 - Full Notes",
   "vimMode": true,
   "showLineNumber": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "5 - Template/",
+    "/Untitled/"
+  ]
 }
