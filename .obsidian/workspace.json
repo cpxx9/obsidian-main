@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "c864aaa4c434fcde",
+        "id": "fca6f38823160460",
         "type": "tabs",
         "children": [
           {
-            "id": "a8f91d30325a90e8",
+            "id": "a85505389fa4c3b5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Configure Azure Virtual Network peering.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Configure Azure Virtual Network peering"
             }
           }
         ]
@@ -119,12 +133,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "2 - Source Material/Configure Azure Virtual Network peering.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Configure Azure Virtual Network peering"
             }
           },
           {
@@ -163,21 +178,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a8f91d30325a90e8",
+  "active": "a85505389fa4c3b5",
   "lastOpenFiles": [
-    "5 - Template/Source Material.md",
-    "2 - Source Material/Host Your Domain in Azure DNS.md",
-    "3 - Tags/dns.md",
     "2 - Source Material/Articles/Configure Network Security Groups.md",
+    "2 - Source Material/Configure Azure Virtual Network peering.md",
+    "2 - Source Material/Articles/Host Your Domain in Azure DNS.md",
+    "5 - Template/Source Material.md",
+    "2 - Source Material/Videos/Untitled.md",
+    "3 - Tags/networking.md",
+    "3 - Tags/dns.md",
     "3 - Tags/network-security.md",
     "3 - Tags/az-104.md",
     "3 - Tags/azure.md",
     "3 - Tags/azure-networking.md",
-    "3 - Tags/networking.md",
     "3 - Tags/cloud.md",
     "5 - Template/Full Note.md",
     "2 - Source Material/Papers/Untitled.md",
-    "2 - Source Material/Videos/Untitled.md",
     "2 - Source Material/Podcasts/Untitled.md",
     "2 - Source Material/Books/Untitled.md",
     "Podcasts.md",
