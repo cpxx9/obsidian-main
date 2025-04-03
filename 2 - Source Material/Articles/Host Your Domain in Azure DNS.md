@@ -2,9 +2,9 @@ Tags: [[azure]] [[az-104]] [[networking]] [[azure-networking]] [[dns]]
 
 # Host Your Domain in Azure DNS
 ### About
-###### Author: MSoft
-###### URL: https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/
-###### Created:
+###### Author: *MSoft*
+###### URL: *https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/*
+###### Published: *n/a*
 -------------------------------------------------------------------
 ## Notes
 Provides a way to manage your DNS records in Azure, helping to keep everything in the same place.

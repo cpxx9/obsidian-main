@@ -2,9 +2,9 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-104]] [[cloud]] [[netwo
 
 # Configure Network Security Groups
 ### About
-###### Author: MSoft
-###### URL: https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/
-###### Created:
+###### Author: *MSoft*
+###### URL: *https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/*
+###### Published: *n/a*
 -------------------------------------------------------------------
 ## Notes
 NSG = Network Security Group
