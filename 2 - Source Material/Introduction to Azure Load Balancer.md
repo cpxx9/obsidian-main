@@ -50,4 +50,13 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-104]] [[cloud]] [[netwo
 - can have multiple IPs
 #### Load balancer rules
 - defines how traffic is distributed to the pool
+- maps front-end IP and Port (source) to backend IP and port (destination)
+- traffic managed with 5-tuple hash made of
+	- Source IP, IP of the requestor
+	- Source Port, port of the requestor
+	- Destination IP, IP of the requested service
+	- Destination Port, port of the requested service
+	- Protocol type, UDP or TCP
+	- Session affinity, ensures that the the same back-end VM handles all traffic for a specific client
+- can balance services on multiple ports, IPs or both
 - 
