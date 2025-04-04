@@ -59,4 +59,55 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-104]] [[cloud]] [[netwo
 	- Protocol type, UDP or TCP
 	- Session affinity, ensures that the the same back-end VM handles all traffic for a specific client
 - can balance services on multiple ports, IPs or both
+- Layer 4 operations only, if layer 7 is needed, something like Azure Application Gateway is needed
+#### Back-end pool
+- groups of VMs or instances in a VM Scale Set 
+- respond to incoming requests 
+- usually cheaper to add more instances to back end pool than to scale vertically
+- as new instances are added to the pool, Azure handles reconfiguring everything based on rules you already have in place
+#### Health probes
+- determines the health status of instances in the back end pool
+	- Load balancer sends traffic or not based on this determination
+- Can define thresholds for healthy vs unhealthy
+- Load balancer stops sending new connections if unhealthy
+	- old connections are not affected or stopped unless
+		- application ends the flow
+		- idle timeout occurs
+		- VM shuts down completely
+#### Session persistence
+- load balancer distributes network traffic equally among all instances in the pool by default
+	- stickiness is only provided within the same transport session
+- Session persistence describes how traffic from a client should be handled
+	- default is that any health instance in the pool can accept successive requests from a client
+- uses hash made up of source and destination IP (sometimes protocol as well) to route traffic to back-end pool instances
+	- can choose between
+	- none (default), any healthy VM can accept subsequent requests
+	- Client IP (2-tuple hash), the same back-end instance must handle subsequent requests from the same client IP, regardless of protocol
+	- Client IP and protocol (3-tuple hash),  the same back-end instance must handle subsequent request from the same client IP and protocol
+#### High availability ports
+- load balancer rule such as `protocol - all and port - 0` is called High availability (HA)
+- enables a single rule to load balance all TCP and UDP flows that arrive on any port of an *internal* load balancer
+#### Inbound NAT rules
+- can combine load balancing rules and NAT rules
+- example, can use NAT from load balancer's public IP address to TCP 3389 on a specific VM, allowing RDP access
+#### Outbound rules
+- configures SNAT for all VMs in the backend pool
+- enables instances to talk outbound to the internet or other public endpoints
+
+### When to use Azure Load Balancer
+- applications that need high performance and ultra low latency
+- if you already have on prem load balancers that need to be replaced
+- balance traffic for front end tier of web apps
+	- internal load balancers for communication between front end and back end tiers
+- Can use inbound NAT rules to enable RDP
+#### When not to use Azure Load Balancer
+- web applications with small amounts of traffic
+- applications that need a WAF (Web Application Firewall)
+- other load balancing services available in Azure that may be better suited for some needs
+	- Azure Front Door
+		- application delivery network, global load balancing and site acceleration
+		- offers layer 7 capabilities like TLS/SSL offload, path-based routing, fast failover, a web application firewall, and caching to improve performance and high availability of your applications
+		- Good for web app deployed across multiple regions
+	- Azure Traffic Manager
+		- DNS based load balancer, not as fast at failover
 - 
