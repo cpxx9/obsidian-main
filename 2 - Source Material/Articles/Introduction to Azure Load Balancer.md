@@ -110,4 +110,3 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-104]] [[cloud]] [[netwo
 		- Good for web app deployed across multiple regions
 	- Azure Traffic Manager
 		- DNS based load balancer, not as fast at failover
-- 
