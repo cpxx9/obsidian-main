@@ -57,3 +57,13 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]]
 		- secure by default
 		- availability zones, routing preferences, global tier all supported
 ### Design Name Resolution for your VNet
+- Azure has Public and Prvate DNS
+#### Public DNS Services
+- Azure public DNS is a hosting service for public domains using Azure global infrastructure
+	- name servers all around the world, DNS requests route to the closest one
+- Reliable, secure management of DNS without a separate solution
+##### Configuration Considerations
+- DNS zone names must be unique *within resource groups*
+- The root domain/parent zone is registered at a domain registrar and pointed to Azure NS name servers
+##### Delegate DNS Domains
+- 
