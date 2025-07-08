@@ -1,4 +1,4 @@
-Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]]
+Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 
 # Introduction to Azure Virtual Networks
 ### About
@@ -66,4 +66,15 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]]
 - DNS zone names must be unique *within resource groups*
 - The root domain/parent zone is registered at a domain registrar and pointed to Azure NS name servers
 ##### Delegate DNS Domains
+- Azure is not a domain registrar itself
+- Azure DNS zones allocate name servers from the Azure pool
+- Parent domain can then be delegated to Azure DNS zone using the name servers
+##### Child Domains
+- Child zones can be used to create sub domains
+- Can be in the same or a different resource group as the parent
+#### Private DNS Services
+- Azure managed  internal DNS service
+	- Removed the need for a custom solution
+- Use own custom domain rather than Azure provided ones
+- Provides name resolution within a vNet and to connected networks
 - 
