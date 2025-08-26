@@ -77,4 +77,6 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 	- Removed the need for a custom solution
 - Use own custom domain rather than Azure provided ones
 - Provides name resolution within a vNet and to connected networks
+- Available in all regions
+#### Azure Private DNS Zones
 - 
