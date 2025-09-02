@@ -13,5 +13,5 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 -  supports multiple connections to same VPN gateway
 	- all tunnels share the available bandwidth
 ### Plan a VPN Gateway
-- 
+- test
 
