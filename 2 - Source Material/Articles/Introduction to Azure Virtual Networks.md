@@ -79,4 +79,33 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 - Provides name resolution within a vNet and to connected networks
 - Available in all regions
 #### Azure Private DNS Zones
-- 
+- Internal resources only
+- global, can be accessed from any region, subscription, VNet, or tenant
+- highly resilient
+	- replicated across all regions
+	- aren't accessible via internet 
+- can create custom Private Zones
+	- configure specific DNS name
+	- create records manually if needed
+	- resolve names/IPs across zones/VNets
+ 
+### Enable Cross-VNet Connectivity with Peering
+- able to create connections between different parts of a virtual network infrastructure
+- can be VNets in same or different regions
+- network traffic between 2 peered VNets is private
+	- on Microsoft backbone network
+- networks appear as one
+- Regional Peering - connects 2 VNets in the same region
+- Global Peering - connects 2 VNets in different regions
+##### Benefits of using virtual network peering
+- low latency high bandwidth
+- Able to use NSGs across VNets
+- transfer data across networks, subscriptions, entra tenants, etc
+- no downtime required to peer
+#### Configure VNet Peering
+- create 2 VNets
+- Peer the VNets
+- Create resources in each VNet
+- Test communication between the 2
+##### Gateway Transit and Connectivity
+- Can configure VPN to be a gateway transit point
