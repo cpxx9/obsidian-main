@@ -7,6 +7,7 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 ###### Published: *n/a*
 -------------------------------------------------------------------
 ## Notes
+
 ### Explore Azure Virtual Networks
 - fundamental building block of a private network in Azure
 - Benefits from Azure's scale, availability and isolation
@@ -109,3 +110,85 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 - Test communication between the 2
 ##### Gateway Transit and Connectivity
 - Can configure VPN to be a gateway transit point
+	- peered networks use the gateway to access other resources
+- VNets can only have one gateway
+- allows the VNet to communicate with resources outside of the peering
+	- use site-to-site VPN to connect to on-prem
+	- connect to another VNet
+	- use point-to-site to connect to client
+- gateway transit allows peered VNets to share the gateway
+	- only need one VPN in peered VNets
+	- all VNets get access to resources in on the gateway (on-site, etc.)
+
+### Implement Virtual Network Traffic Routing
+- route tables are auto generated  for each subnet in a VNet
+	- default routes, as well as UDRs
+#### System routes
+- the default routes created by azure for each subnet
+- cannot be edited or removed
+	- can be overridden
+- optional default routes may be provided if using specific Azure capabilities
+##### Default system routes
+- each route contains an address prefix and next hop type
+
+| Source  | Address        | Next     |
+| ------- | -------------- | -------- |
+| Default | Unique to VNet | VNet     |
+| Default | 0.0.0.0/0      | Internet |
+| Default | 10.0.0.0/8     | None     |
+| Default | 172.16.0.0/16  | None     |
+| Default | 192.168.0.0/16 | None     |
+| Default | 100.64.0.0/10  | None     |
+- next hop types:
+- **VNet** - routes traffic between address ranges withing a VNet, default is how different subnets talk to each other
+- **Internet** - Routes traffic to the internet, default routes all traffic to an address not in the VNet address range to the internet
+	- excludes Azure services, as those are routed over the MSoft backbone network
+- **None** - Traffic is dropped
+##### Optional default system routes
+- Azure adds default system routes for any Azure capabilities enabled
+	- either to specific subnets, or all subnets depending on the capability
+
+| Source                  | Address prefixes                         | Next hop type                 | Subnet within virtual network route is used |
+| ----------------------- | ---------------------------------------- | ----------------------------- | ------------------------------------------- |
+| ******                  | ******                                   | ******                        | ******                                      |
+| Default                 | Unique to VNet                           | Virtual network peering       | All                                         |
+| Virtual Network Gateway | Prefixes advertised from on-prem via BGP | All                           |                                             |
+| Default                 | Multiple                                 | VirtualNetworkServiceEndpoint | Only the subnet the service is enabled for  |
+- **VNET peering** - routes  generated for each address range between 2 peered VNets
+- **Virtual** **network gateway** - Azure adds one or more routes when VNet gateway is added
+- **VirtualNetworkServiceEndpoint** - Azure adds the public IP address(es) for certain services when you enable it's service endpoint
+	- Service endpoints are enabled for individual subnets within a virtual network, so  routes are only added for that subnet 
+	- Azure updates these routes as the IPs change
+#### User defined routes
+- Default routes can be overridden with UDRs
+- each subnet can have one or more route table
+	- when created and applied to a subnet, the UDRs combine or override the default routes
+- Next hop types:
+	- **Virtual Appliance** - a VM that usually runs a network application (firewall)
+		- need to specify next hop IP
+	- **Virtual network gateway** - used to route traffic through a VNet gateway
+	- **None** - used to drop traffic
+	- **Virtual Network** - used to override defaults routes within VNet
+	- **Internet** - Routes traffic to the internet
+#### Consider Azure Route Server
+- simplifies dynamic routing between NVA (Network Virtual Appliance) and VNet
+- automatically updates routing tables on NVA whenever VNet addresses change
+- automatically updates UDRs when NVA announces new routes, or withdraws old
+- can peer multiple instances of NVA to Azure Route Server
+- uses on BGP, a common protocol, to interface between NVA and Azure Route Server
+- can be deploying in any new/existing VNet
+#### Troubleshoot with effective routes
+- View routes that are currently effective for any network interface in your VNet
+
+### Configure Internet Access with Virtual NAT
+- Azure NAT lets internal resources in VNet share a routable public IPv4 address
+- Can map traffic flow from subnets through Virtual NAT
+- No UDRs needed
+	- NAT takes precedence over other outbound routes, replaces default internet destination of a subnet
+- supports up to 16 public IP addresses
+	- Load balancer, Public IP address, Public IP prefix
+#### Limitations of NAT
+- does not work in IPv6
+- cannot span multiple VNets
+- does not support IP fragmentation
+
