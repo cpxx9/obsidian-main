@@ -1,4 +1,4 @@
-Tags: [[networking]]
+Tags: [[networking]][[network-media]]
 
 # Media and Connectors
 ### About
@@ -57,4 +57,102 @@ CAT 8
 - Fire retardant
 - Used in plenum spaces
 
-#### Copper Media Connections
+##### Copper Media Connections
+- wiring kits are pretty cheap $10-15
+RJ-11 (Registered Jack 11)
+- 6 pin connector used for phone lines
+- carries less data as it only uses 6 of 8 wires in cable
+- clip in
+RJ-45 (Registered Jack 45)
+- 8 pin connector used for ethernet cables (cat5e-8)
+- uses all 8 wires in cable
+- clip in
+F-type RG-X (Radio Guide X (59 or 6))
+- used for coax cables
+- 59 is older, slower, not used
+- screw in
+BNC (Bayonet Neil-Concelman)
+- used for coax cables
+- higher speeds/bandwidth/stability than F-type
+- push and twist in
+- Also called British Naval Connector
+#### Fiber Media
+Single-Mode
+- core 8-10 microns in diameter (hair is 17-180)
+- can go for hundreds of miles
+- 10-100 Gbps
+- yellow jacket
+- expensive
+Multi-Mode
+- core is 50-100 microns in diameter
+- can go for about 2 kilometers
+- 10-100 Gbps
+- blue/orange jacket
+- cheaper than single-mode
+##### Fiber Media Connections
+- wiring kits are expensive $150-250
+SC (Subscriber Connector)
+- Push Pull
+- square shape
+- precise, minimal signal loss, durable, easy to use
+- Stick Click
+- used for single mode
+LC (Lucent Connector)
+- Push Pull 
+- smaller form factor than SC, very similar square shape
+- precise, minimal signal loss, slightly harder to use being smaller
+- often connectors are bound together (Love Connector)
+- used when space is restricted
+ST (Straight Tip)
+- Twist-lock 
+- round shape
+- very robust
+- Stick and Twist
+- used in environments with high movement/vibration or outdoors
+MTRJ (Mechanical Transfer-Registered Jack)
+- transmit and receive fibers in same connector
+- small rectangular design
+- used when space is restricted (fiber switches)
+MPO (Multi-Fiber Push On)
+- designed to have multiple fibers in a single connector
+- increases capacity and flexibility of a fiber network
+- used in data-centers, high speed networks (backbones, interconnections)
+###### Polishes
+- back reflection causes signal degradation in fiber cables
+	- transmitted light comes back into the transmitter
+- different polishes help minimize this back reflection
+PC (Physical Contact)
+- least effective reduction in back reflection
+- cheapest
+UPC (Ultra Physical Contact)
+- updated PC
+- good balance of performance and cost
+APC (Angled Physical Contact)
+- lowest back reflection
+- most expensive
+#### Transceivers
+- L1 devices that can transmit and receive data
+- can convert data from one protocol into another
+	- ethernet to fiber channel, etc.
+- or one type into another
+- ethernet to ethernet with fiber in the middle, etc.
+SFP (Small Form Factor Pluggable)
+- 4.25 Gbps
+- single channel
+- older
+SFP+ (Small Form Factor Pluggable Plus)
+- 16 Gbps
+- single channel
+- Updated SFP
+QSFP (Quad Small Form Factor Pluggable)
+- 10 Gbps
+- quad channel
+QSFP+ (Small Form Factor Pluggable Plus)
+- 40 Gbps
+- quad channel
+QSFP28 (Small Form Factor Pluggable) 
+- 100 Gbps
+- quad channel
+QSFP56 (Small Form Factor Pluggable)
+- 200 Gbps
+- quad channel
