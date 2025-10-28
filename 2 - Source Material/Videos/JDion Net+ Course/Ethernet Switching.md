@@ -131,6 +131,7 @@ Speed/Duplex
 	- auto-select highest settings the two devices they have in common
 	- can sometimes be wrong, best to manually configure
 #### Spanning Tree Protocol (STP) 802.1d
+![[STP-model]]
 - allows redundant links between switches
 - prevents network loops
 How a loop happens
