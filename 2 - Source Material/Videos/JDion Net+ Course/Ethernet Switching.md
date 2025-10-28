@@ -169,4 +169,31 @@ How STP prevents loops
 	- receive data as BPDUs (Bridge Protocol Data Units), but do not forward it
 	- if a link goes down, the Non-designated port will detect failure and transition to Designated or Root Port if needed
 #### Network Access Control (NAC)
+- Methods to increate network security by inspecting devices trying to connect
+Port Security
+- physical network ports are restricted by MAC address or other controls that are set
+MAC Filtering
+- Limits which devices can access network based on MAC address
+- can be blacklist or whitelist
+802.1x Authentication
+- authentication framework for networks to ensure only authenticated users can access network
+- uses EAP
+- Supplicant
+	- device trying to connect to the network
+- Authenticator
+	- device the Supplicant is trying to access
+- Authentication Server
+	- server on the network used to authenticate (RADIUS, etc.)
+- Time-Based
+	- specify hours based on an organizations normal schedule
+	- need to take time zones into account
+- Location-Based
+	- geo location technology to allow only certain physical locations
+	- need to take remote users into account
+- Role-Based
+	- dynamic method based on a users role in the company
+	- more set up required
+- Rule-Based
+	- uses a set of predefined rules
+	- can be a combination of many of the above methods
 #### Maximum Transmission Unit (MTU)

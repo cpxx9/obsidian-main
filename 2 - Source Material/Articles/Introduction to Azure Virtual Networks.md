@@ -17,7 +17,7 @@ Tags: [[azure]] [[azure-networking]] [[networking]] [[az-700]] [[dns]]
 		- allow inbound or outbound to Internet via Public IPs or Load Balancer
 	- Other Azure resources
 		- securely and privately through VNets, VNet service endpoints, or VNet peering
-		- connect to VMs and other Azure Resources like App Service Environment, Kubernetes Servcice, Virtual Machine Scale Sets, Azure SQL, Storage accounts, etc.
+		- connect to VMs and other Azure Resources like App Service Environment, Kubernetes Service, Virtual Machine Scale Sets, Azure SQL, Storage accounts, etc.
 	- On Prem resources
 		- Extend datacenter to the cloud through point-to-site, site-to-site VPNs, or Azure Express Route
 - Filter traffic between subnets using NSGs or NVAs
