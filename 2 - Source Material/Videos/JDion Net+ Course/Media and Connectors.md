@@ -1,4 +1,4 @@
-Tags: [[networking]][[network-media]]
+Tags: [[networking]] [[network-media]] [[physical-networking]]
 
 # Media and Connectors
 ### About
