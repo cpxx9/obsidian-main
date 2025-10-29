@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "-\"path:Excalidraw\" ",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 376,
-  "scale": 1.0000000000000009,
+  "scale": 0.7733374428598213,
   "close": true
 }

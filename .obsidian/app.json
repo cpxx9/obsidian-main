@@ -6,6 +6,8 @@
   "alwaysUpdateLinks": true,
   "userIgnoreFilters": [
     "5 - Template/",
-    "/Untitled/"
-  ]
+    "/Untitled/",
+    "Excalidraw/"
+  ],
+  "promptDelete": false
 }

@@ -1,4 +1,4 @@
-Tags: [[networking]] [[network-routing]]
+Tags: [[networking]] [[network-routing]] [[physical-networking]]
 
 # Ethernet Switching
 ### About
@@ -197,3 +197,21 @@ MAC Filtering
 	- uses a set of predefined rules
 	- can be a combination of many of the above methods
 #### Maximum Transmission Unit (MTU)
+- largest size of a frame that can be sent over a network
+	- bytes
+- load capacity
+###### If set too high
+- packet loss
+- need for data transmission
+###### If set too low
+- more overhead as there are more packets being sent that need to be managed
+- 1500 is a standard default for ethernet networks
+- smaller size used for wireless networks, VPN, PPPoE (1400)
+###### Jumbo Frames 
+- any frame larger than 1500
+- usually 9000
+- useful in SANs, server-to-server communications, video streaming, etc.
+Fragmentation
+- if jumbo frame encounters a network segment or device using a smaller MTU
+- frame gets split up into smaller frames
+- causes latency, negates any positive effects from using jumbo frame
