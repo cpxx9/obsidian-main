@@ -7,7 +7,9 @@
   "userIgnoreFilters": [
     "5 - Template/",
     "/Untitled/",
-    "Excalidraw/"
+    "Excalidraw/",
+    "2 - Source Material/Videos/JDion Net+ Course/assets/",
+    "7 - Drawings/"
   ],
   "promptDelete": false
 }
