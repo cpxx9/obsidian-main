@@ -60,8 +60,110 @@ Loop Protection
 	- rather than preventing the interface from promoting the route back out, it promotes it with a cost of Infinite
 		- no other routers will ever want to use that as the cost will be higher than any other routes
 ##### Routing Protocols
-###### Internal
+###### Router Advertisement Methods
+- how routers device to advertise and receive routes
+Distance Vector
+- amount of hops
+- router sends a full copy of it's routing table to all directly-connected neighbors at set intervals
+- slow convergence time
+	- time it takes for all routers to update their tables when there is a topology change
+Link State
+- speed of links
+	- uses Cost
+- all routers need to know all paths to other routers
+- faster convergence than Distance vectors
+Hybrid
+- combination of both
+###### Interior Gateway Protocols
 - communication between devices on an internal network
 	- between subnets
-###### External
+- RIP (Routing Information Protocol)
+	- uses distance vector 
+	- updates every 30 seconds
+	- slow convergence
+	- UDP
+- OSPF (Open Shortest Path First)
+	- uses link state vector
+	- fast convergence
+- IS-IS (Intermediate System to Intermediate System)
+	- uses link state vector
+	- similar to OSPF, not as popular
+- EIGRP (Enhanced Interior Gateway Routing Protocol)
+	- uses both link state and distance vector
+	- Cisco proprietary
+	- more efficient than OSPF
+###### Exterior Gateway Protocols
 - used for communication between 2 separate networks
+- BGP (Border Gateway Protocol)
+	- uses path vector to determine least of amount of autonomous system hops, rather than router hops
+		- more devices than just routers on the internet
+	- used for backbone of the internet
+	- very slow convergence
+
+| ROUTING PROTOCOL | TYPE                     | INTERIOR/EXTERIOR |
+| ---------------- | ------------------------ | ----------------- |
+| RIP              | Distance Vector          | Interior          |
+| OSPF             | Link State               | Interior          |
+| EIGRP            | Advanced distance vector | Interior          |
+| IS-IS            | Link state               | Interior          |
+| BGP              | Path Vector              | Exterior          |
+
+##### Route Selection
+- believability of a route
+- routers may support multiple interior gateway protocols
+	- newer protocols are more believable
+- Administrative Distance is the number that determines believability
+	- lower the better
+	- newer the route, lower the AD
+
+| **ROUTING INFO SOURCE**  | **ADMINISTRATIVE DISTANCE** |
+| ------------------------ | --------------------------- |
+| Directly Connected Route | 0                           |
+| Static Routes            | 1                           |
+| EIGRP                    | 90                          |
+| OSPF                     | 110                         |
+| RIP                      | 120                         |
+| External EIGRP           | 170                         |
+| Unknown or Unbelieveable | 255                         |
+##### Address Translation
+###### NAT
+- Translates private IP into a public IP
+- used back when not many users on a network had to reach the internet at a given time
+- Inside Local
+	- private IP address of the device
+- Inside Global
+	- Public IP the device uses for the internet
+	- router
+- Outside Local
+	- private IP of router
+- Outside Global
+	- Public IP of the destination device
+DNAT (Dynamic)
+- auto assigns IP address from a pool of addresses
+- one-to-one translation
+- can only have the amount of devices online as IP addresses in the pool
+SNAT (Static)
+- manually assign public IP addresses
+- one-to-one translation
+- can only have the amount of devices online as IP addresses in the pool
+###### PAT
+- one public IP address is used for multiple devices
+- a random port gets added with the devices private IP address
+##### Routing Redundancy Protocols
+- Protocols that prevent disruptions by re-routing data if a path/device fails
+- FHRP (First Hop Redundancy Protocol)
+	- set of protocols that provide automatic failover to a backup router
+	- use a virtual IP
+		- that IP represents multiple devices
+	- if one device goes down, clients don't need to update network configs
+Hot Standby Router Protocol
+- One router acts as the main router, with a secondary as backup
+- if primary fails, secondary takes over
+- Cisco only
+Virtual Router Redundancy Protocol
+- Similar to HSRP, but open protocol
+Gateway Load Balancing Protocol
+- Routers act together
+- traffic is split between multiple routers
+- if one goes down, others still work fine
+- Cisco only
