@@ -1,8 +1,8 @@
-Tags: [[networking]] [[cloud]] [[network-routing]] [[high-availability]]
+Tags: [[networking]] [[network-security]] 
 # Cloud and the Datacenter
 ### About
 ###### Author: *Jason Dion*
-###### URL: *https://udemy.com/course/comptia-network-009/learn/lecture/42186292#overview*
+###### URL: *https://ctcomp.udemy.com/course/comptia-network-009/learn/lecture/42186388#*overview*
 ###### Published: *n/a*
 -------------------------------------------------------------------
 ## Notes
